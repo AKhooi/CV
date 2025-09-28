@@ -1,0 +1,379 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@400;700&display=swap');
+
+$primary_color: #152437;
+$paper_color: #E8E8EA;
+$myFont: Merriweather Sans, sans-serif;
+
+html, body {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #d6d6d6;
+  overflow: hidden;
+  font-family: $myFont;
+}
+
+h1 {
+  font-size: 0.8rem;
+}
+
+h2 {
+  font-weight: normal;
+  font-size: 0.7rem;
+}
+
+h3 {
+  font-size: 0.6rem;
+  font-weight: normal;
+}
+
+h4 {
+  font-size: 0.5rem;
+  margin: 0;
+}
+
+h5 {
+  line-height: 1.6;
+  text-align: justify;
+  font-weight: normal;
+  font-size: 0.35rem;
+  margin: 0 10px 0 20px;
+}
+
+.container {
+  aspect-ratio: 528 / 746;
+  width: min(100vw, 100vh * 526 / 746);
+  height: auto;
+  background: white;
+  display: flex;
+
+  .left-column {
+    flex: 0 0 calc(170 / 528 * 100%);
+    padding-top: 10px;
+    background: $primary_color;
+    align-items: center;
+
+    h1, h2, h3, h4, h5, h6 {
+      color: white;
+    }
+
+    .avatar {
+      display: block;
+      justify-items: center;
+      text-align: center;
+      margin-bottom: 10px;
+
+      .frame-border {
+        aspect-ratio: 1;
+        width: 50%;
+        background: white;
+        clip-path: polygon(50% 0%, 92% 25%, 92% 75%, 50% 100%, 8% 75%, 8% 25%);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .frame {
+          aspect-ratio: 1;
+          position: relative;
+          width: 97%;
+          height: 97%;
+          clip-path: polygon(50% 0%, 92% 25%, 92% 75%, 50% 100%, 8% 75%, 8% 25%);
+          overflow: hidden;
+
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: 50% 20%;
+          }
+        }
+      }
+
+      .name {
+        h1 {
+          margin-top: 5px;
+          margin-bottom: 0;
+        }
+
+        h2 {
+          margin-top: 4px;
+          margin-bottom: 0;
+        }
+      }
+    }
+
+    .profile, .contact-me, .personal-skills, .connect {
+      width: 100%;
+      display: block;
+
+      .group {
+        width: 100%;
+        display: flex;
+        margin: 10px 0 5px 10px;
+        align-items: center;
+        gap: 5px;
+
+        .icon-border {
+          aspect-ratio: 1;
+          width: 16%;
+          clip-path: polygon(50% 0%, 92% 25%, 92% 75%, 50% 100%, 8% 75%, 8% 25%);
+          background: white;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          .icon {
+            width: 90%;
+            height: 90%;
+            background: $primary_color;
+            clip-path: polygon(50% 0%, 92% 25%, 92% 75%, 50% 100%, 8% 75%, 8% 25%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            i {
+              color: white;
+              font-size: 10px;
+              object-fit: cover;
+            }
+          }
+        }
+
+        hr {
+          flex: 1;
+        }
+      }
+    }
+
+    .contact-me, .connect {
+      width: 100%;
+
+      .contact-me-wrapper {
+        display: block;
+        margin-left: 10px;
+        margin-right: 10px;
+
+        .contact-me-group {
+          display: flex;
+          margin-bottom: 3px;
+          align-items: center;
+
+
+          .hexagon {
+            aspect-ratio: 1;
+            width: 15%;
+            background: white;
+            flex-shrink: 0;
+            clip-path: polygon(50% 0%, 92% 25%, 92% 75%, 50% 100%, 8% 75%, 8% 25%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            i {
+              color: $primary_color;
+              font-size: 7px;
+            }
+          }
+
+          h5 {
+            margin: 0 0 0 5px;
+          }
+        }
+      }
+    }
+
+    .personal-skills {
+      width: 100%;
+
+      .personal-skills-wrapper {
+        display: block;
+        margin-left: 20px;
+        margin-right: 10px;
+
+        .personal-skills-group {
+          display: flex;
+          align-items: center;
+          margin-top: 3px;
+
+          .dot {
+            background: white;
+            width: 5px;
+            height: 5px;
+            border-radius: 50%;
+            flex-shrink: 0;
+          }
+
+          h5 {
+            flex: 1;
+            margin-left: 5px;
+            margin-right: 20px;
+            word-wrap: break-word;
+          }
+
+          .process-container {
+            flex: 1;
+            height: 3px;
+            background: $primary_color;
+            border: 1px solid white;
+            border-radius: 40px;
+            display: flex;
+            align-items: center;
+            margin-left: auto;
+            flex-shrink: 0;
+
+            .process-bar {
+              width: 50%;
+              height: 3px;
+              background: white;
+            }
+          }
+        }
+
+      }
+    }
+  }
+
+  .right-column {
+    flex: 1;
+    width: 70%;
+    padding: 10px 0 10px 10px;
+    background: $paper_color;
+
+    h1, h2, h3, h4, h5, h6 {
+      color: $primary_color;
+    }
+
+    h5 {
+      margin: 0;
+    }
+
+    .work-experience, .professional-skills, .education, .pronciency {
+      .group {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        gap: 5px;
+
+        .icon-border {
+          aspect-ratio: 1;
+          width: 9%;
+          clip-path: polygon(50% 0%, 92% 25%, 92% 75%, 50% 100%, 8% 75%, 8% 25%);
+          background: $primary_color;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          .icon {
+            width: 90%;
+            height: 90%;
+            background: $paper_color;
+            clip-path: polygon(50% 0%, 92% 25%, 92% 75%, 50% 100%, 8% 75%, 8% 25%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            i {
+              color: $primary_color;
+              font-size: 10px;
+              object-fit: cover;
+            }
+          }
+        }
+
+        hr {
+          flex: 1;
+          border: 1px solid $primary_color;
+        }
+      }
+    }
+    .work-experience, .education{
+      .work-experience-wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        margin-left: 10px;
+        margin-top: 5px;
+
+        .work-experience-container {
+          display: flex;
+          align-items: center;
+          gap: 5px;
+
+          .dot {
+            background: $primary_color;
+            width: 5px;
+            height: 5px;
+            border-radius: 50%;
+            flex-shrink: 0;
+          }
+        }
+        h5{
+          margin-left: 10px;
+          margin-right: 20px;
+        }
+      }
+    }
+
+    .professional-skills, .pronciency{
+      width: 100%;
+      padding-top: 10px;
+
+      .professional-skills-container{
+        display: flex;
+        width: 100%;
+        margin-top: 5px;
+        margin-bottom: 10px;
+
+        .personal-skills-wrapper {
+          display: flex;
+          flex-direction: column;
+          margin-left: 10px;
+          margin-right: 10px;
+          width: 100%;
+          gap: 5px;
+
+          .personal-skills-group {
+            display: flex;
+            align-items: center;
+            margin-top: 3px;
+
+            .dot {
+              background: $primary_color;
+              width: 5px;
+              height: 5px;
+              border-radius: 50%;
+              flex-shrink: 0;
+            }
+
+            h5 {
+              flex: 1;
+              margin-left: 5px;
+              margin-right: 20px;
+              word-wrap: break-word;
+            }
+
+            .process-container {
+              flex: 1;
+              height: 3px;
+              background: $paper_color;
+              border: 1px solid $primary_color;
+              border-radius: 40px;
+              display: flex;
+              align-items: center;
+              margin-left: auto;
+              flex-shrink: 0;
+
+              .process-bar {
+                width: 50%;
+                height: 3px;
+                background: $primary_color;
+              }
+            }
+          }
+
+        }
+      }
+    }
+  }
+}

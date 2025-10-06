@@ -5,7 +5,6 @@ html, body {
   justify-content: center;
   align-items: center;
   background: #d6d6d6;
-  overflow: hidden;
   font-family: Merriweather Sans, sans-serif;
 }
 
@@ -44,6 +43,9 @@ h5 {
   display: flex;
 }
 .container .left-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
   flex: 0 0 32.196969697%;
   padding-top: 10px;
   background: #152437;
@@ -73,7 +75,6 @@ h5 {
   width: 97%;
   height: 97%;
   clip-path: polygon(50% 0%, 92% 25%, 92% 75%, 50% 100%, 8% 75%, 8% 25%);
-  overflow: hidden;
 }
 .container .left-column .avatar .frame-border .frame img {
   width: 100%;
@@ -82,7 +83,7 @@ h5 {
   object-position: 50% 20%;
 }
 .container .left-column .avatar .name h1 {
-  margin-top: 5px;
+  margin-top: 0.4em;
   margin-bottom: 0;
 }
 .container .left-column .avatar .name h2 {
@@ -120,7 +121,7 @@ h5 {
 }
 .container .left-column .profile .group .icon-border .icon i, .container .left-column .contact-me .group .icon-border .icon i, .container .left-column .personal-skills .group .icon-border .icon i, .container .left-column .connect .group .icon-border .icon i {
   color: white;
-  font-size: 10px;
+  font-size: 0.7rem;
   object-fit: cover;
 }
 .container .left-column .profile .group hr, .container .left-column .contact-me .group hr, .container .left-column .personal-skills .group hr, .container .left-column .connect .group hr {
@@ -194,11 +195,13 @@ h5 {
   flex-shrink: 0;
 }
 .container .left-column .personal-skills .personal-skills-wrapper .personal-skills-group .process-container .process-bar {
-  width: 50%;
   height: 3px;
   background: white;
 }
 .container .right-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
   flex: 1;
   width: 70%;
   padding: 10px 0 10px 10px;
@@ -236,7 +239,7 @@ h5 {
 }
 .container .right-column .work-experience .group .icon-border .icon i, .container .right-column .professional-skills .group .icon-border .icon i, .container .right-column .education .group .icon-border .icon i, .container .right-column .pronciency .group .icon-border .icon i {
   color: #152437;
-  font-size: 10px;
+  font-size: 0.7rem;
   object-fit: cover;
 }
 .container .right-column .work-experience .group hr, .container .right-column .professional-skills .group hr, .container .right-column .education .group hr, .container .right-column .pronciency .group hr {

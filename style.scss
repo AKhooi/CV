@@ -10,7 +10,6 @@ html, body {
   justify-content: center;
   align-items: center;
   background: #d6d6d6;
-  overflow: hidden;
   font-family: $myFont;
 }
 
@@ -49,6 +48,9 @@ h5 {
   display: flex;
 
   .left-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
     flex: 0 0 calc(170 / 528 * 100%);
     padding-top: 10px;
     background: $primary_color;
@@ -79,7 +81,6 @@ h5 {
           width: 97%;
           height: 97%;
           clip-path: polygon(50% 0%, 92% 25%, 92% 75%, 50% 100%, 8% 75%, 8% 25%);
-          overflow: hidden;
 
           img {
             width: 100%;
@@ -92,7 +93,7 @@ h5 {
 
       .name {
         h1 {
-          margin-top: 5px;
+          margin-top: 0.4em;
           margin-bottom: 0;
         }
 
@@ -134,7 +135,7 @@ h5 {
 
             i {
               color: white;
-              font-size: 10px;
+              font-size: 0.7rem;
               object-fit: cover;
             }
           }
@@ -223,7 +224,6 @@ h5 {
             flex-shrink: 0;
 
             .process-bar {
-              width: 50%;
               height: 3px;
               background: white;
             }
@@ -235,6 +235,9 @@ h5 {
   }
 
   .right-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
     flex: 1;
     width: 70%;
     padding: 10px 0 10px 10px;
@@ -275,7 +278,7 @@ h5 {
 
             i {
               color: $primary_color;
-              font-size: 10px;
+              font-size: 0.7rem;
               object-fit: cover;
             }
           }
@@ -377,3 +380,4 @@ h5 {
     }
   }
 }
+

@@ -5,7 +5,7 @@ $paper_color: #E8E8EA;
 $myFont: Merriweather Sans, sans-serif;
 
 html, body {
-  height: 100%;
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -14,21 +14,21 @@ html, body {
 }
 
 h1 {
-  font-size: 0.8rem;
+  font-size: 1.5rem;
 }
 
 h2 {
   font-weight: normal;
-  font-size: 0.7rem;
+  font-size: 1.3rem;
 }
 
 h3 {
-  font-size: 0.6rem;
+  font-size: 1.2rem;
   font-weight: normal;
 }
 
 h4 {
-  font-size: 0.5rem;
+  font-size: 1rem;
   margin: 0;
 }
 
@@ -36,16 +36,32 @@ h5 {
   line-height: 1.6;
   text-align: justify;
   font-weight: normal;
-  font-size: 0.35rem;
+  font-size: 0.7rem;
   margin: 0 10px 0 20px;
 }
+h6{
+  line-height: 1.9;
+  text-align: justify;
+  font-weight: normal;
+  font-size: 0.6rem;
+  margin: 0 1em 0 2em;
+}
 
-.container {
-  aspect-ratio: 528 / 746;
-  width: min(100vw, 100vh * 526 / 746);
-  height: auto;
+.container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 50px auto;
+  background: #d6d6d6;
+
+
+.a4-page {
+  width: 210mm;
+  height: 297mm;
   background: white;
   display: flex;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
 
   .left-column {
     display: flex;
@@ -135,7 +151,7 @@ h5 {
 
             i {
               color: white;
-              font-size: 0.7rem;
+              font-size: 1.2em;
               object-fit: cover;
             }
           }
@@ -152,8 +168,8 @@ h5 {
 
       .contact-me-wrapper {
         display: block;
-        margin-left: 10px;
-        margin-right: 10px;
+        margin-left: 1em;
+        margin-right: 1em;
 
         .contact-me-group {
           display: flex;
@@ -173,7 +189,7 @@ h5 {
 
             i {
               color: $primary_color;
-              font-size: 7px;
+              font-size: 1em;
             }
           }
 
@@ -189,32 +205,32 @@ h5 {
 
       .personal-skills-wrapper {
         display: block;
-        margin-left: 20px;
+        margin-left: 1.5rem;
         margin-right: 10px;
 
         .personal-skills-group {
           display: flex;
           align-items: center;
-          margin-top: 3px;
+          margin-top: 0.9rem;
 
           .dot {
             background: white;
-            width: 5px;
-            height: 5px;
+            width: 0.5em;
+            height: 0.5em;
             border-radius: 50%;
             flex-shrink: 0;
           }
 
           h5 {
             flex: 1;
-            margin-left: 5px;
-            margin-right: 20px;
-            word-wrap: break-word;
+            margin-left: 0.9em;
+            margin-right: 2em;
+            white-space: nowrap;
           }
 
           .process-container {
-            flex: 1;
-            height: 3px;
+            flex: 0 0 90px;
+            height: 0.5rem;
             background: $primary_color;
             border: 1px solid white;
             border-radius: 40px;
@@ -224,7 +240,7 @@ h5 {
             flex-shrink: 0;
 
             .process-bar {
-              height: 3px;
+              height: 0.5rem;
               background: white;
             }
           }
@@ -278,7 +294,7 @@ h5 {
 
             i {
               color: $primary_color;
-              font-size: 0.7rem;
+              font-size: 1.4em;
               object-fit: cover;
             }
           }
@@ -294,9 +310,9 @@ h5 {
       .work-experience-wrapper {
         display: flex;
         flex-direction: column;
-        gap: 5px;
-        margin-left: 10px;
-        margin-top: 5px;
+        gap: 0.3em;
+        margin-left: 1.2em;
+        margin-top: 1em;
 
         .work-experience-container {
           display: flex;
@@ -305,13 +321,13 @@ h5 {
 
           .dot {
             background: $primary_color;
-            width: 5px;
-            height: 5px;
+            width: 0.4em;
+            height: 0.4em;
             border-radius: 50%;
             flex-shrink: 0;
           }
         }
-        h5{
+        h6{
           margin-left: 10px;
           margin-right: 20px;
         }
@@ -331,20 +347,20 @@ h5 {
         .personal-skills-wrapper {
           display: flex;
           flex-direction: column;
-          margin-left: 10px;
-          margin-right: 10px;
+          margin-left: 1.2em;
+          margin-right: 1em;
           width: 100%;
           gap: 5px;
 
           .personal-skills-group {
             display: flex;
             align-items: center;
-            margin-top: 3px;
+            margin-top: 0.6rem;
 
             .dot {
               background: $primary_color;
-              width: 5px;
-              height: 5px;
+              width: 0.4em;
+              height: 0.4em;
               border-radius: 50%;
               flex-shrink: 0;
             }
@@ -353,12 +369,12 @@ h5 {
               flex: 1;
               margin-left: 5px;
               margin-right: 20px;
-              word-wrap: break-word;
+              white-space: nowrap;
             }
 
             .process-container {
-              flex: 1;
-              height: 3px;
+              flex: 0 0 70px;
+              height: 0.6rem;
               background: $paper_color;
               border: 1px solid $primary_color;
               border-radius: 40px;
@@ -368,8 +384,7 @@ h5 {
               flex-shrink: 0;
 
               .process-bar {
-                width: 50%;
-                height: 3px;
+                height: 0.6rem;
                 background: $primary_color;
               }
             }
@@ -379,5 +394,6 @@ h5 {
       }
     }
   }
+}
 }
 

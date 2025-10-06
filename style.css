@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@400;700&display=swap");
 html, body {
-  height: 100%;
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -9,21 +9,21 @@ html, body {
 }
 
 h1 {
-  font-size: 0.8rem;
+  font-size: 1.5rem;
 }
 
 h2 {
   font-weight: normal;
-  font-size: 0.7rem;
+  font-size: 1.3rem;
 }
 
 h3 {
-  font-size: 0.6rem;
+  font-size: 1.2rem;
   font-weight: normal;
 }
 
 h4 {
-  font-size: 0.5rem;
+  font-size: 1rem;
   margin: 0;
 }
 
@@ -31,18 +31,34 @@ h5 {
   line-height: 1.6;
   text-align: justify;
   font-weight: normal;
-  font-size: 0.35rem;
+  font-size: 0.7rem;
   margin: 0 10px 0 20px;
 }
 
+h6 {
+  line-height: 1.9;
+  text-align: justify;
+  font-weight: normal;
+  font-size: 0.6rem;
+  margin: 0 1em 0 2em;
+}
+
 .container {
-  aspect-ratio: 528/746;
-  width: min(100vw, 70.509383378vh);
-  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 50px auto;
+  background: #d6d6d6;
+}
+.container .a4-page {
+  width: 210mm;
+  height: 297mm;
   background: white;
   display: flex;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
 }
-.container .left-column {
+.container .a4-page .left-column {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -51,16 +67,16 @@ h5 {
   background: #152437;
   align-items: center;
 }
-.container .left-column h1, .container .left-column h2, .container .left-column h3, .container .left-column h4, .container .left-column h5, .container .left-column h6 {
+.container .a4-page .left-column h1, .container .a4-page .left-column h2, .container .a4-page .left-column h3, .container .a4-page .left-column h4, .container .a4-page .left-column h5, .container .a4-page .left-column h6 {
   color: white;
 }
-.container .left-column .avatar {
+.container .a4-page .left-column .avatar {
   display: block;
   justify-items: center;
   text-align: center;
   margin-bottom: 10px;
 }
-.container .left-column .avatar .frame-border {
+.container .a4-page .left-column .avatar .frame-border {
   aspect-ratio: 1;
   width: 50%;
   background: white;
@@ -69,39 +85,39 @@ h5 {
   justify-content: center;
   align-items: center;
 }
-.container .left-column .avatar .frame-border .frame {
+.container .a4-page .left-column .avatar .frame-border .frame {
   aspect-ratio: 1;
   position: relative;
   width: 97%;
   height: 97%;
   clip-path: polygon(50% 0%, 92% 25%, 92% 75%, 50% 100%, 8% 75%, 8% 25%);
 }
-.container .left-column .avatar .frame-border .frame img {
+.container .a4-page .left-column .avatar .frame-border .frame img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   object-position: 50% 20%;
 }
-.container .left-column .avatar .name h1 {
+.container .a4-page .left-column .avatar .name h1 {
   margin-top: 0.4em;
   margin-bottom: 0;
 }
-.container .left-column .avatar .name h2 {
+.container .a4-page .left-column .avatar .name h2 {
   margin-top: 4px;
   margin-bottom: 0;
 }
-.container .left-column .profile, .container .left-column .contact-me, .container .left-column .personal-skills, .container .left-column .connect {
+.container .a4-page .left-column .profile, .container .a4-page .left-column .contact-me, .container .a4-page .left-column .personal-skills, .container .a4-page .left-column .connect {
   width: 100%;
   display: block;
 }
-.container .left-column .profile .group, .container .left-column .contact-me .group, .container .left-column .personal-skills .group, .container .left-column .connect .group {
+.container .a4-page .left-column .profile .group, .container .a4-page .left-column .contact-me .group, .container .a4-page .left-column .personal-skills .group, .container .a4-page .left-column .connect .group {
   width: 100%;
   display: flex;
   margin: 10px 0 5px 10px;
   align-items: center;
   gap: 5px;
 }
-.container .left-column .profile .group .icon-border, .container .left-column .contact-me .group .icon-border, .container .left-column .personal-skills .group .icon-border, .container .left-column .connect .group .icon-border {
+.container .a4-page .left-column .profile .group .icon-border, .container .a4-page .left-column .contact-me .group .icon-border, .container .a4-page .left-column .personal-skills .group .icon-border, .container .a4-page .left-column .connect .group .icon-border {
   aspect-ratio: 1;
   width: 16%;
   clip-path: polygon(50% 0%, 92% 25%, 92% 75%, 50% 100%, 8% 75%, 8% 25%);
@@ -110,7 +126,7 @@ h5 {
   align-items: center;
   justify-content: center;
 }
-.container .left-column .profile .group .icon-border .icon, .container .left-column .contact-me .group .icon-border .icon, .container .left-column .personal-skills .group .icon-border .icon, .container .left-column .connect .group .icon-border .icon {
+.container .a4-page .left-column .profile .group .icon-border .icon, .container .a4-page .left-column .contact-me .group .icon-border .icon, .container .a4-page .left-column .personal-skills .group .icon-border .icon, .container .a4-page .left-column .connect .group .icon-border .icon {
   width: 90%;
   height: 90%;
   background: #152437;
@@ -119,28 +135,28 @@ h5 {
   align-items: center;
   justify-content: center;
 }
-.container .left-column .profile .group .icon-border .icon i, .container .left-column .contact-me .group .icon-border .icon i, .container .left-column .personal-skills .group .icon-border .icon i, .container .left-column .connect .group .icon-border .icon i {
+.container .a4-page .left-column .profile .group .icon-border .icon i, .container .a4-page .left-column .contact-me .group .icon-border .icon i, .container .a4-page .left-column .personal-skills .group .icon-border .icon i, .container .a4-page .left-column .connect .group .icon-border .icon i {
   color: white;
-  font-size: 0.7rem;
+  font-size: 1.2em;
   object-fit: cover;
 }
-.container .left-column .profile .group hr, .container .left-column .contact-me .group hr, .container .left-column .personal-skills .group hr, .container .left-column .connect .group hr {
+.container .a4-page .left-column .profile .group hr, .container .a4-page .left-column .contact-me .group hr, .container .a4-page .left-column .personal-skills .group hr, .container .a4-page .left-column .connect .group hr {
   flex: 1;
 }
-.container .left-column .contact-me, .container .left-column .connect {
+.container .a4-page .left-column .contact-me, .container .a4-page .left-column .connect {
   width: 100%;
 }
-.container .left-column .contact-me .contact-me-wrapper, .container .left-column .connect .contact-me-wrapper {
+.container .a4-page .left-column .contact-me .contact-me-wrapper, .container .a4-page .left-column .connect .contact-me-wrapper {
   display: block;
-  margin-left: 10px;
-  margin-right: 10px;
+  margin-left: 1em;
+  margin-right: 1em;
 }
-.container .left-column .contact-me .contact-me-wrapper .contact-me-group, .container .left-column .connect .contact-me-wrapper .contact-me-group {
+.container .a4-page .left-column .contact-me .contact-me-wrapper .contact-me-group, .container .a4-page .left-column .connect .contact-me-wrapper .contact-me-group {
   display: flex;
   margin-bottom: 3px;
   align-items: center;
 }
-.container .left-column .contact-me .contact-me-wrapper .contact-me-group .hexagon, .container .left-column .connect .contact-me-wrapper .contact-me-group .hexagon {
+.container .a4-page .left-column .contact-me .contact-me-wrapper .contact-me-group .hexagon, .container .a4-page .left-column .connect .contact-me-wrapper .contact-me-group .hexagon {
   aspect-ratio: 1;
   width: 15%;
   background: white;
@@ -150,42 +166,42 @@ h5 {
   align-items: center;
   justify-content: center;
 }
-.container .left-column .contact-me .contact-me-wrapper .contact-me-group .hexagon i, .container .left-column .connect .contact-me-wrapper .contact-me-group .hexagon i {
+.container .a4-page .left-column .contact-me .contact-me-wrapper .contact-me-group .hexagon i, .container .a4-page .left-column .connect .contact-me-wrapper .contact-me-group .hexagon i {
   color: #152437;
-  font-size: 7px;
+  font-size: 1em;
 }
-.container .left-column .contact-me .contact-me-wrapper .contact-me-group h5, .container .left-column .connect .contact-me-wrapper .contact-me-group h5 {
+.container .a4-page .left-column .contact-me .contact-me-wrapper .contact-me-group h5, .container .a4-page .left-column .connect .contact-me-wrapper .contact-me-group h5 {
   margin: 0 0 0 5px;
 }
-.container .left-column .personal-skills {
+.container .a4-page .left-column .personal-skills {
   width: 100%;
 }
-.container .left-column .personal-skills .personal-skills-wrapper {
+.container .a4-page .left-column .personal-skills .personal-skills-wrapper {
   display: block;
-  margin-left: 20px;
+  margin-left: 1.5rem;
   margin-right: 10px;
 }
-.container .left-column .personal-skills .personal-skills-wrapper .personal-skills-group {
+.container .a4-page .left-column .personal-skills .personal-skills-wrapper .personal-skills-group {
   display: flex;
   align-items: center;
-  margin-top: 3px;
+  margin-top: 0.9rem;
 }
-.container .left-column .personal-skills .personal-skills-wrapper .personal-skills-group .dot {
+.container .a4-page .left-column .personal-skills .personal-skills-wrapper .personal-skills-group .dot {
   background: white;
-  width: 5px;
-  height: 5px;
+  width: 0.5em;
+  height: 0.5em;
   border-radius: 50%;
   flex-shrink: 0;
 }
-.container .left-column .personal-skills .personal-skills-wrapper .personal-skills-group h5 {
+.container .a4-page .left-column .personal-skills .personal-skills-wrapper .personal-skills-group h5 {
   flex: 1;
-  margin-left: 5px;
-  margin-right: 20px;
-  word-wrap: break-word;
+  margin-left: 0.9em;
+  margin-right: 2em;
+  white-space: nowrap;
 }
-.container .left-column .personal-skills .personal-skills-wrapper .personal-skills-group .process-container {
-  flex: 1;
-  height: 3px;
+.container .a4-page .left-column .personal-skills .personal-skills-wrapper .personal-skills-group .process-container {
+  flex: 0 0 90px;
+  height: 0.5rem;
   background: #152437;
   border: 1px solid white;
   border-radius: 40px;
@@ -194,11 +210,11 @@ h5 {
   margin-left: auto;
   flex-shrink: 0;
 }
-.container .left-column .personal-skills .personal-skills-wrapper .personal-skills-group .process-container .process-bar {
-  height: 3px;
+.container .a4-page .left-column .personal-skills .personal-skills-wrapper .personal-skills-group .process-container .process-bar {
+  height: 0.5rem;
   background: white;
 }
-.container .right-column {
+.container .a4-page .right-column {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -207,19 +223,19 @@ h5 {
   padding: 10px 0 10px 10px;
   background: #E8E8EA;
 }
-.container .right-column h1, .container .right-column h2, .container .right-column h3, .container .right-column h4, .container .right-column h5, .container .right-column h6 {
+.container .a4-page .right-column h1, .container .a4-page .right-column h2, .container .a4-page .right-column h3, .container .a4-page .right-column h4, .container .a4-page .right-column h5, .container .a4-page .right-column h6 {
   color: #152437;
 }
-.container .right-column h5 {
+.container .a4-page .right-column h5 {
   margin: 0;
 }
-.container .right-column .work-experience .group, .container .right-column .professional-skills .group, .container .right-column .education .group, .container .right-column .pronciency .group {
+.container .a4-page .right-column .work-experience .group, .container .a4-page .right-column .professional-skills .group, .container .a4-page .right-column .education .group, .container .a4-page .right-column .pronciency .group {
   width: 100%;
   display: flex;
   align-items: center;
   gap: 5px;
 }
-.container .right-column .work-experience .group .icon-border, .container .right-column .professional-skills .group .icon-border, .container .right-column .education .group .icon-border, .container .right-column .pronciency .group .icon-border {
+.container .a4-page .right-column .work-experience .group .icon-border, .container .a4-page .right-column .professional-skills .group .icon-border, .container .a4-page .right-column .education .group .icon-border, .container .a4-page .right-column .pronciency .group .icon-border {
   aspect-ratio: 1;
   width: 9%;
   clip-path: polygon(50% 0%, 92% 25%, 92% 75%, 50% 100%, 8% 75%, 8% 25%);
@@ -228,7 +244,7 @@ h5 {
   align-items: center;
   justify-content: center;
 }
-.container .right-column .work-experience .group .icon-border .icon, .container .right-column .professional-skills .group .icon-border .icon, .container .right-column .education .group .icon-border .icon, .container .right-column .pronciency .group .icon-border .icon {
+.container .a4-page .right-column .work-experience .group .icon-border .icon, .container .a4-page .right-column .professional-skills .group .icon-border .icon, .container .a4-page .right-column .education .group .icon-border .icon, .container .a4-page .right-column .pronciency .group .icon-border .icon {
   width: 90%;
   height: 90%;
   background: #E8E8EA;
@@ -237,77 +253,77 @@ h5 {
   align-items: center;
   justify-content: center;
 }
-.container .right-column .work-experience .group .icon-border .icon i, .container .right-column .professional-skills .group .icon-border .icon i, .container .right-column .education .group .icon-border .icon i, .container .right-column .pronciency .group .icon-border .icon i {
+.container .a4-page .right-column .work-experience .group .icon-border .icon i, .container .a4-page .right-column .professional-skills .group .icon-border .icon i, .container .a4-page .right-column .education .group .icon-border .icon i, .container .a4-page .right-column .pronciency .group .icon-border .icon i {
   color: #152437;
-  font-size: 0.7rem;
+  font-size: 1.4em;
   object-fit: cover;
 }
-.container .right-column .work-experience .group hr, .container .right-column .professional-skills .group hr, .container .right-column .education .group hr, .container .right-column .pronciency .group hr {
+.container .a4-page .right-column .work-experience .group hr, .container .a4-page .right-column .professional-skills .group hr, .container .a4-page .right-column .education .group hr, .container .a4-page .right-column .pronciency .group hr {
   flex: 1;
   border: 1px solid #152437;
 }
-.container .right-column .work-experience .work-experience-wrapper, .container .right-column .education .work-experience-wrapper {
+.container .a4-page .right-column .work-experience .work-experience-wrapper, .container .a4-page .right-column .education .work-experience-wrapper {
   display: flex;
   flex-direction: column;
-  gap: 5px;
-  margin-left: 10px;
-  margin-top: 5px;
+  gap: 0.3em;
+  margin-left: 1.2em;
+  margin-top: 1em;
 }
-.container .right-column .work-experience .work-experience-wrapper .work-experience-container, .container .right-column .education .work-experience-wrapper .work-experience-container {
+.container .a4-page .right-column .work-experience .work-experience-wrapper .work-experience-container, .container .a4-page .right-column .education .work-experience-wrapper .work-experience-container {
   display: flex;
   align-items: center;
   gap: 5px;
 }
-.container .right-column .work-experience .work-experience-wrapper .work-experience-container .dot, .container .right-column .education .work-experience-wrapper .work-experience-container .dot {
+.container .a4-page .right-column .work-experience .work-experience-wrapper .work-experience-container .dot, .container .a4-page .right-column .education .work-experience-wrapper .work-experience-container .dot {
   background: #152437;
-  width: 5px;
-  height: 5px;
+  width: 0.4em;
+  height: 0.4em;
   border-radius: 50%;
   flex-shrink: 0;
 }
-.container .right-column .work-experience .work-experience-wrapper h5, .container .right-column .education .work-experience-wrapper h5 {
+.container .a4-page .right-column .work-experience .work-experience-wrapper h6, .container .a4-page .right-column .education .work-experience-wrapper h6 {
   margin-left: 10px;
   margin-right: 20px;
 }
-.container .right-column .professional-skills, .container .right-column .pronciency {
+.container .a4-page .right-column .professional-skills, .container .a4-page .right-column .pronciency {
   width: 100%;
   padding-top: 10px;
 }
-.container .right-column .professional-skills .professional-skills-container, .container .right-column .pronciency .professional-skills-container {
+.container .a4-page .right-column .professional-skills .professional-skills-container, .container .a4-page .right-column .pronciency .professional-skills-container {
   display: flex;
   width: 100%;
   margin-top: 5px;
   margin-bottom: 10px;
 }
-.container .right-column .professional-skills .professional-skills-container .personal-skills-wrapper, .container .right-column .pronciency .professional-skills-container .personal-skills-wrapper {
+.container .a4-page .right-column .professional-skills .professional-skills-container .personal-skills-wrapper, .container .a4-page .right-column .pronciency .professional-skills-container .personal-skills-wrapper {
   display: flex;
   flex-direction: column;
-  margin-left: 10px;
-  margin-right: 10px;
+  margin-left: 1.2em;
+  margin-right: 1em;
   width: 100%;
   gap: 5px;
 }
-.container .right-column .professional-skills .professional-skills-container .personal-skills-wrapper .personal-skills-group, .container .right-column .pronciency .professional-skills-container .personal-skills-wrapper .personal-skills-group {
+.container .a4-page .right-column .professional-skills .professional-skills-container .personal-skills-wrapper .personal-skills-group, .container .a4-page .right-column .pronciency .professional-skills-container .personal-skills-wrapper .personal-skills-group {
   display: flex;
   align-items: center;
-  margin-top: 3px;
+  margin-top: 0.6rem;
 }
-.container .right-column .professional-skills .professional-skills-container .personal-skills-wrapper .personal-skills-group .dot, .container .right-column .pronciency .professional-skills-container .personal-skills-wrapper .personal-skills-group .dot {
+.container .a4-page .right-column .professional-skills .professional-skills-container .personal-skills-wrapper .personal-skills-group .dot, .container .a4-page .right-column .pronciency .professional-skills-container .personal-skills-wrapper .personal-skills-group .dot {
   background: #152437;
-  width: 5px;
-  height: 5px;
+  width: 0.4em;
+  height: 0.4em;
   border-radius: 50%;
   flex-shrink: 0;
 }
-.container .right-column .professional-skills .professional-skills-container .personal-skills-wrapper .personal-skills-group h5, .container .right-column .pronciency .professional-skills-container .personal-skills-wrapper .personal-skills-group h5 {
+.container .a4-page .right-column .professional-skills .professional-skills-container .personal-skills-wrapper .personal-skills-group h5, .container .a4-page .right-column .pronciency .professional-skills-container .personal-skills-wrapper .personal-skills-group h5 {
   flex: 1;
   margin-left: 5px;
   margin-right: 20px;
-  word-wrap: break-word;
+  white-space: nowrap;
 }
-.container .right-column .professional-skills .professional-skills-container .personal-skills-wrapper .personal-skills-group .process-container, .container .right-column .pronciency .professional-skills-container .personal-skills-wrapper .personal-skills-group .process-container {
-  flex: 1;
-  height: 3px;
+.container .a4-page .right-column .professional-skills .professional-skills-container .personal-skills-wrapper .personal-skills-group .process-container, .container .a4-page .right-column .pronciency .professional-skills-container .personal-skills-wrapper .personal-skills-group .process-container {
+  flex: 0 0 70px;
+  height: 0.6rem;
   background: #E8E8EA;
   border: 1px solid #152437;
   border-radius: 40px;
@@ -316,9 +332,8 @@ h5 {
   margin-left: auto;
   flex-shrink: 0;
 }
-.container .right-column .professional-skills .professional-skills-container .personal-skills-wrapper .personal-skills-group .process-container .process-bar, .container .right-column .pronciency .professional-skills-container .personal-skills-wrapper .personal-skills-group .process-container .process-bar {
-  width: 50%;
-  height: 3px;
+.container .a4-page .right-column .professional-skills .professional-skills-container .personal-skills-wrapper .personal-skills-group .process-container .process-bar, .container .a4-page .right-column .pronciency .professional-skills-container .personal-skills-wrapper .personal-skills-group .process-container .process-bar {
+  height: 0.6rem;
   background: #152437;
 }
 
